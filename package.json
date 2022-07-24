@@ -1,6 +1,6 @@
 {
-  "name": "chai-passport-strategy",
-  "version": "3.0.0",
+  "name": "@freeatnet/chai-passport-strategy",
+  "version": "4.0.0",
   "description": "Helpers for testing Passport strategies with the Chai assertion library.",
   "keywords": [
     "chai",
@@ -31,16 +31,22 @@
     }
   ],
   "main": "./lib",
-  "dependencies": {},
+  "types": "./lib/index.d.ts",
   "devDependencies": {
+    "@types/chai": "4.x.x",
+    "@types/express": "^4.17.13",
+    "@types/passport-strategy": "^0.2.35",
+    "chai": "4.x.x",
     "make-node": "0.3.x",
-    "mocha": "1.x.x",
-    "chai": "2.x.x"
+    "mocha": "10.x.x"
   },
   "engines": {
     "node": ">= 0.4.0"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha --require test/bootstrap/node test/*.test.js"
+  },
+  "dependencies": {
+    "node-mocks-http": "^1.11.0"
   }
 }
